@@ -9,7 +9,7 @@ const Navbar = ({color}) => {
             <div>
             <img alt='logo' src={Logo} height={'100%'} width={55}/>
             </div>
-            <Menu />
+            <Menu color={color}/>
         </div>
 
     <div className='h-[6.25rem] hidden md:flex justify-around items-center p-0 m-0'>

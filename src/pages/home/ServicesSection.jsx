@@ -8,9 +8,9 @@ const ServicesSection = () => {
       <Title title="OUR SERVICES" />
       <div className='flex flex-wrap justify-around items-center gap-y-16 mx-24'>
         {services.map((service) => (
-          <div key={service.id} className="w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center justify-center gap-4">
+          <div key={service.id} className="  flex  flex-col items-center justify-center gap-4">
             <div className="h-44 w-44 border-4 border-[#B79130] rounded-full flex items-center justify-center" >
-            <img src={service.img} alt={service.title} height={100} width={100}/>
+            <img src={service.img} alt={service.title} height={120} width={120}/>
             </div>
             <p className="text-xl font-medium">{service.title}</p>
           </div>
