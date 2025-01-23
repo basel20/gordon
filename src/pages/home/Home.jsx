@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState , useEffect} from 'react'
 import Slider from './Slider'
 import Footer from '../../components/Footer'
 import img1 from '../../images/1.jpg'
 import img2 from '../../images/2.avif'
 import img3 from '../../images/3.jpg'
+import Logo from '../../images/logo.png'
 import AboutSection from './AboutSection'
 import ServicesSection from './ServicesSection'
 import Clients from './Clients'
@@ -27,13 +28,30 @@ const slides = [
   },
 ];
 const Home = () => {
+
+  const [isSplash, setIsSplash] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsSplash(false);
+    }, 2000);
+  })
+
   return (
     <>
-    <Slider slides={slides}/>
-    <AboutSection />
-    <ServicesSection/>
-    <Clients />
-    <Footer />
+    {isSplash ? (
+        <div className='flex justify-center items-center h-screen bg-[#221e1f]'>
+          <img src={Logo} alt='logo' height={200} width={200} /> 
+        </div>
+      ) :(
+      <article>
+      <Slider slides={slides}/>
+      <AboutSection />
+      <ServicesSection/>
+      <Clients />
+     
+    </article>
+      )}
     </>
   )
 }
