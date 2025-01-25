@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapComponent = () => {
-  const position = [51.505, -0.09]; // Default location (London)
+  const position = [55.74718463026228, 37.53850701416]; // Default location (London)
 
   return (
     <div className="w-full h-96">

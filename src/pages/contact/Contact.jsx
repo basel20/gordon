@@ -24,8 +24,8 @@ const Contact = () => {
           <div className='flex gap-8'>
               <img src={phone} alt="phone" height={100} width={100}/>
               <span className='flex flex-col items-start justify-center gap-2'>
-                <h4 className='font-semibold text-left text-xl'>+7 (800) 555-35-35</h4>
-                <h4 className='font-semibold text-left text-xl'>+7 (800) 555-35-35</h4>
+                <h4 className='font-semibold text-left text-xl'>+7 (800) 222-11-53</h4>
+                {/* <h4 className='font-semibold text-left text-xl'>+7 (800) 555-35-35</h4> */}
               </span>
             </div>
 

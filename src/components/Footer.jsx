@@ -24,10 +24,10 @@ const Footer = () => {
         <a href='/contact'>Contact</a>
       </div>
       <div className='flex flex-col gap-4 justify-center md:items-start text-lg'>
-        <p>Russia, Moscow, Lenina street, 15</p>
+        <p className='text-left'>Russia, Moscow, Moscow city, Capital City <br/> 54 Floor, Office 541</p>
         <p>gordon@mail.com</p>
-        <p>8 (800) 555-35-35</p>
-        <p>8 (800) 555-35-35</p>
+        <p>8 (800) 222-11-53</p>
+        {/* <p>8 (800) 555-35-35</p> */}
       </div>
       <div className='flex md:flex-col gap-5 justify-center md:items-start text-lg'>
         <span>
