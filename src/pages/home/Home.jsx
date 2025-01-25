@@ -11,11 +11,11 @@ import Clients from './Clients'
 
 
 const slides = [
-  // {
-  //   image: img1,
-  //   title: "A LEGACY .....",
-  //   description: "IN THE MAKING",
-  // },
+  {
+    image: img1,
+    title: "A LEGACY .....",
+    description: "IN THE MAKING",
+  },
   {
     image: img2,
     title: "BUILDING SUCCESS .....",

@@ -17,7 +17,7 @@ const Menu = ({color}) => {
     </button>
       
       { isOpen && (
-        <div className='absolute bg-black text-white left-0 w-full h-[100vh] text-lg z-10 -mt-16 flex flex-col gap-8 justify-center items-center'>
+        <div className='absolute bg-black text-white left-0 w-full h-[100vh] text-lg z-50 -mt-16 flex flex-col gap-8 justify-center items-center'>
             <span className='absolute top-10 right-16 h-8 w-8 cursor-pointer rounded-full border-2 border-white' onClick={()=> setIsOpen(!isOpen)}>
                 X
             </span>
