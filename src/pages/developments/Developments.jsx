@@ -5,31 +5,56 @@ import mapB from '../../images/mapB.png'
 import d1 from '../../images/d1.png'
 import d2 from '../../images/d2.png'
 import d3 from '../../images/d3.png'
+import { AnimatedTestimonials } from '../../components/AnimatedCard'
 
 const developments = [
   {
     id:1,
     name:"THE VYRA SUITES DOHA",
     label:"HOSPITALITY | TOWER | WESTBAY AREA",
-    description:"The Vyra Suites Doha is one of Samrya Group’s towers in West Bay. This fully  furnished 43-storey residential tower consists of 228 apartments ranging from  1, 2 & 3 bedroom suites. The Vyra Suites is known for its luxurious amenities, hand-picked furnishing  and décor with attention to detail in every corner.",
+    description:"The Vyra Suites Doha is one of Samrya Group’s towers in West Bay.  The Vyra Suites is known for its luxurious amenities, hand-picked furnishing  and décor with attention to detail in every corner.",
     img:d1
   },
   {
     id:2,
     name:"THE PLAZA DOHA",
     label:"DESTINATION | HOSPITALITY | UMM GHUWALINA AREA",
-    description:"The Plaza Doha posed to be a luxury development in the heart of Doha, delivering  to its visitors and residents a unique and extraordinary hospitality experience.The Plaza will offer 290 fully furnished suites and hotel serviced apartments with a  wide range of posh amenities and services, exquisite culinary concepts, an award winning spa, and state-of-the-art banqueting services.",
+    description:"The Plaza Doha posed to be a luxury development in the heart of Doha, delivering  to its visitors and residents a unique and extraordinary hospitality experience.",
     img:d2
   },
   {
     id:3,
     name:"SAMRYA GARDENS DOHA",
     label:" RESIDENTIAL COMPOUND | HOSPITALTY | AL WAAB AREA",
-    description:"Samrya Gardens is the flagship property development of Samrya Group renowned  for being the ideal choice for family-oriented residential communities.The Gardens has more than 150 fully furnished 2 & 3 bedroom flats with a host of  amenities, indoor and outdoor recreational services suitable for all ages.",
+    description:"Samrya Gardens is the flagship property development of Samrya Group renowned  for being the ideal choice for family-oriented residential communities.",
     img:d3
   },
   
 ]
+
+// const testimonials = [
+//   {
+//     quote:
+//       "The Vyra Suites Doha is one of Samrya Group’s towers in West Bay. This fully  furnished 43-storey residential tower consists of 228 apartments ranging from  1, 2 & 3 bedroom suites. The Vyra Suites is known for its luxurious amenities, hand-picked furnishing  and décor with attention to detail in every corner.",
+//     name: "HOSPITALITY | TOWER | WESTBAY AREA",
+//     designation: "THE VYRA SUITES DOHA",
+//     src: d1,
+//   },
+//   {
+//     quote:
+//       "The Plaza Doha posed to be a luxury development in the heart of Doha, delivering  to its visitors and residents a unique and extraordinary hospitality experience.The Plaza will offer 290 fully furnished suites and hotel serviced apartments with a  wide range of posh amenities and services, exquisite culinary concepts, an award winning spa, and state-of-the-art banqueting services.",
+//     name: "DESTINATION | HOSPITALITY | UMM GHUWALINA AREA",
+//     designation: "THE PLAZA DOHA",
+//     src: d2,
+//   },
+//   {
+//     quote:
+//       "Samrya Gardens is the flagship property development of Samrya Group renowned  for being the ideal choice for family-oriented residential communities.The Gardens has more than 150 fully furnished 2 & 3 bedroom flats with a host of  amenities, indoor and outdoor recreational services suitable for all ages.",
+//     name: "RESIDENTIAL COMPOUND | HOSPITALTY | AL WAAB AREA",
+//     designation: "SAMRYA GARDENS DOHA",
+//     src: d3,
+//   }
+// ];
 
 const Developments = () => {
   return (
@@ -39,10 +64,10 @@ const Developments = () => {
       <Title title="OUR DEVELOPMENTS" />
       <div className='flex flex-col  mt-16 gap-16'>
       <div className='flex flex-col justify-between items-center'>
-          <img src={mapB} alt="map" height={500} width={'65%'}/>
+          <img src={mapB} alt="map" height={500} className='w-[80%] md:w-[70%]'/>
       </div>
 
-      <div className='w-full px-16 md:px-44 flex flex-col gap-16'>
+      {/* <div className='w-full px-16 md:px-44 flex flex-col gap-16'>
 
         {developments.map((development) => (
            <div key={development.id} className='w-[100%] flex justify-center items-center gap-16'>
@@ -62,7 +87,11 @@ const Developments = () => {
            </div>
          </div>
         ))}
-      </div>
+
+        <AnimatedTestimonials testimonials={testimonials} />
+      </div> */}
+
+      <AnimatedTestimonials testimonials={developments} />
 
       </div>
       </section> 

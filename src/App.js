@@ -11,13 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
 
-  const [isSplash, setIsSplash] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsSplash(false);
-    }, 2000);
-  })
 
 
   return (

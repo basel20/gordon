@@ -24,26 +24,7 @@ const services = [
         title: 'TRADING AND CONTRACTING',
         img: srv4,
     },
-    {
-        id: 5,
-        title: 'TRADING AND CONTRACTING',
-        img: srv4,
-    },
-    {
-        id: 6,
-        title: 'TRADING AND CONTRACTING',
-        img: srv4,
-    },
-    {
-        id: 7,
-        title: 'TRADING AND CONTRACTING',
-        img: srv4,
-    },
-    {
-        id: 8,
-        title: 'TRADING AND CONTRACTING',
-        img: srv4,
-    },
+   
     
 ]
 
