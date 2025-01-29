@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
+import { useTranslation } from 'react-i18next';
+import '../../config/i18n'; 
 
 const Slider = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const { t } = useTranslation();
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+   
   // Automatically change the slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,6 +27,8 @@ const Slider = ({ slides }) => {
       prevIndex === 0 ? slides.length - 1 : prevIndex - 1
     );
   };
+
+  
 
   return (
     <div className="relative w-full h-[calc(95vh)] overflow-hidden">

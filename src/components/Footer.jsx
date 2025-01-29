@@ -4,8 +4,13 @@ import TG from '../images/telegram.svg'
 import FB from '../images/facebook.svg'
 import WA from '../images/whatsapp.svg'
 import INST from '../images/instagram.svg'
+import { useTranslation } from 'react-i18next';
+import '../config/i18n'; 
+
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <section className='mt-10 h-[25rem] bg-black flex flex-col  text-white' >
       
@@ -17,14 +22,14 @@ const Footer = () => {
        </a>
       </div>
       <div className='flex md:flex-col gap-4 justify-center md:items-start text-lg'>
-        <h4>Menu</h4>
-        <a href='/'>Home</a>
-        <a href='/about'>About</a>
-        <a href='/developments'>Developments</a>
-        <a href='/contact'>Contact</a>
+        <h4>{t('Menu')}</h4>
+        <a href='/'>{t('Home')}</a>
+        <a href='/about'>{t('About')}</a>
+        <a href='/developments'>{t('Developments')}</a>
+        <a href='/contact'>{t('Contact')}</a>
       </div>
       <div className='flex flex-col gap-4 justify-center md:items-start text-lg'>
-        <p className='text-left'>Russia, Moscow, Moscow city, Capital City <br/> 54 Floor, Office 541</p>
+        <p className='text-left'>{t('Location')} <br/> {t('Address')}</p>
         <p>gordon@mail.com</p>
         <p>8 (800) 222-11-53</p>
         {/* <p>8 (800) 555-35-35</p> */}

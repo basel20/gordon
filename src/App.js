@@ -8,6 +8,7 @@ import Contact from './pages/contact/Contact';
 import React,{ useState , useEffect} from 'react';
 import Logo from './images/logo.png'
 import Footer from './components/Footer';
+import './config/i18n'
 
 function App() {
 
