@@ -5,63 +5,61 @@ import mapB from '../../images/mapB.png'
 import d1 from '../../images/d1.png'
 import d2 from '../../images/d2.png'
 import d3 from '../../images/d3.png'
+import d4 from '../../images/d4.png'
+import d5 from '../../images/d5.png'
 import { AnimatedTestimonials } from '../../components/AnimatedCard'
+import '../../config/i18n'; 
+import { useTranslation } from 'react-i18next';
 
-const developments = [
-  {
-    id:1,
-    name:"THE VYRA SUITES DOHA",
-    label:"HOSPITALITY | TOWER | WESTBAY AREA",
-    description:"The Vyra Suites Doha is one of Samrya Group’s towers in West Bay.  The Vyra Suites is known for its luxurious amenities, hand-picked furnishing  and décor with attention to detail in every corner.",
-    img:d1
-  },
-  {
-    id:2,
-    name:"THE PLAZA DOHA",
-    label:"DESTINATION | HOSPITALITY | UMM GHUWALINA AREA",
-    description:"The Plaza Doha posed to be a luxury development in the heart of Doha, delivering  to its visitors and residents a unique and extraordinary hospitality experience.",
-    img:d2
-  },
-  {
-    id:3,
-    name:"SAMRYA GARDENS DOHA",
-    label:" RESIDENTIAL COMPOUND | HOSPITALTY | AL WAAB AREA",
-    description:"Samrya Gardens is the flagship property development of Samrya Group renowned  for being the ideal choice for family-oriented residential communities.",
-    img:d3
-  },
-  
-]
-
-// const testimonials = [
-//   {
-//     quote:
-//       "The Vyra Suites Doha is one of Samrya Group’s towers in West Bay. This fully  furnished 43-storey residential tower consists of 228 apartments ranging from  1, 2 & 3 bedroom suites. The Vyra Suites is known for its luxurious amenities, hand-picked furnishing  and décor with attention to detail in every corner.",
-//     name: "HOSPITALITY | TOWER | WESTBAY AREA",
-//     designation: "THE VYRA SUITES DOHA",
-//     src: d1,
-//   },
-//   {
-//     quote:
-//       "The Plaza Doha posed to be a luxury development in the heart of Doha, delivering  to its visitors and residents a unique and extraordinary hospitality experience.The Plaza will offer 290 fully furnished suites and hotel serviced apartments with a  wide range of posh amenities and services, exquisite culinary concepts, an award winning spa, and state-of-the-art banqueting services.",
-//     name: "DESTINATION | HOSPITALITY | UMM GHUWALINA AREA",
-//     designation: "THE PLAZA DOHA",
-//     src: d2,
-//   },
-//   {
-//     quote:
-//       "Samrya Gardens is the flagship property development of Samrya Group renowned  for being the ideal choice for family-oriented residential communities.The Gardens has more than 150 fully furnished 2 & 3 bedroom flats with a host of  amenities, indoor and outdoor recreational services suitable for all ages.",
-//     name: "RESIDENTIAL COMPOUND | HOSPITALTY | AL WAAB AREA",
-//     designation: "SAMRYA GARDENS DOHA",
-//     src: d3,
-//   }
-// ];
 
 const Developments = () => {
+
+  const { t } = useTranslation();
+
+  const developments = [
+    {
+      id:1,
+      name: t('THE_VYRA_SUITES_DOHA'),
+      label: t('THE_VYRA_SUITES_LABELS'),
+      description: t('THE_VYRA_SUITES_DES'),
+      img:d1
+    },
+    {
+      id:2,
+      name: t("THE_PLAZA_DOHA"),
+      label: t("THE_PLAZA_DOHA_LABELS"),
+      description: t("THE_PLAZA_DOHA_DES"),
+      img:d2
+    },
+    {
+      id:3,
+      name: t("SAMRYA_GARDENS_DOHA"),
+      label: t("SAMRYA_GARDENS_LABELS"),
+      description: t("SAMRYA_GARDENS_DES"),
+      img:d3
+    },
+    {
+      id:4,
+      name: t("AAYAN_WEST_BAY"),
+      label: t("AAYAN_WEST_BAY_LABELS"),
+      description: t("AAYAN_WEST_BAY_DES"),
+      img:d4
+    },
+    {
+      id:5,
+      name: t("SAMRYA_TWIN_TOWERS"),
+      label: t("SAMRYA_TWIN_TOWERS_LABELS"),
+      description: t("SAMARY_TWIN_TOWERS_DES"),
+      img:d5
+    },
+    
+  ]
+
   return (
     <>
      <Navbar />
      <section className='my-16 md:mb-24 '>
-      <Title title="OUR DEVELOPMENTS" />
+      <Title title={t("OUR_DEVELOPMENTS")} />
       <div className='flex flex-col  mt-16 gap-16'>
       <div className='flex flex-col justify-between items-center'>
           <img src={mapB} alt="map" height={500} className='w-[80%] md:w-[70%]'/>

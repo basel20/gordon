@@ -5,18 +5,19 @@ import clock from '../../images/clock.svg'
 import mail from '../../images/mail.svg'
 import phone from '../../images/phone.svg'
 import MapComponent from '../../components/Map'
-import { MapContainer } from "react-leaflet"
+import { useTranslation } from 'react-i18next';
+import '../../config/i18n'; 
 
 const Contact = () => {
 
-  const position = [40.73061, -73.935242];
+  const { t, i18n } = useTranslation();
 
 
   return (
     <>
     <Navbar />
     <section className='my-16 md:mb-24'>
-      <Title title="CONTACT US"/>
+      <Title title={t("CONTACT_US")}/>
       <div className='flex flex-col justify-center items-center gap-16 mx-12 md:mx-32 pt-8'>
         <div className='flex flex-col lg:flex-row justify-around items-center gap-32'>
 
@@ -40,14 +41,14 @@ const Contact = () => {
             <div className='flex gap-8'>
               <img src={clock} alt="clock" height={100} width={100}/>
               <span className='flex flex-col items-start justify-center gap-2'>
-                <h4 className='font-semibold text-left text-xl'>Monday - Friday</h4>
+                <h4 className='font-semibold text-left text-xl'>{t("MON_FRI")}</h4>
                 <h4 className='font-semibold text-left text-xl'>9:00 - 18:00</h4>
               </span>
             </div>
           </div>
 
           <div className="max-w-md w-full border-2 border-[#B79130] p-6">
-            <h2 className="text-2xl font-bold text-center mb-6">Send A Message</h2>
+            <h2 className="text-2xl font-bold text-center mb-6">{t("SEND_MESSAGE")}</h2>
             <form>
               <input
                 type="text"
@@ -68,7 +69,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full bg-[#CDB26E] text-white py-2 text-center font-semibold text-xl hover:bg-black transition duration-300 ease-in-out"
               >
-                Confirm
+                {t("Confirm")}
               </button>
             </form>
         </div>

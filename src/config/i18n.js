@@ -2,6 +2,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Menu from "../components/Menu";
 
+
+const storedLanguage = localStorage.getItem("language") || "en";
+
 // Define your translations here
 const resources = {
   en: {
@@ -48,7 +51,27 @@ const resources = {
       OUR_DEVELOPMENTS: "OUR DEVELOPMENTS",
       CONTACT_US: "CONTACT US",
       OUR_SERVICES: "OUR SERVICES",
-    },
+      THE_PLAZA_DOHA: "THE PLAZA DOHA",
+      THE_PLAZA_DOHA_DES: "The Plaza Doha posed to be a luxury development in the heart of Doha, delivering  to its visitors and residents a unique and extraordinary hospitality experience.",
+      THE_PLAZA_DOHA_LABELS: "DESTINATION | HOSPITALITY | UMM GHUWALINA AREA",
+      THE_VYRA_SUITES_DOHA: "THE VYRA SUITES DOHA",
+      THE_VYRA_SUITES_LABELS: "HOSPITALITY | TOWER | WESTBAY AREA",
+      THE_VYRA_SUITES_DES: "The Vyra Suites Doha is one of Samrya Group’s towers in West Bay.  The Vyra Suites is known for its luxurious amenities, hand-picked furnishing  and décor with attention to detail in every corner.",
+      SAMRYA_GARDENS_DOHA: "SAMRYA GARDENS DOHA",
+      SAMRYA_GARDENS_LABELS: "RESIDENTIAL COMPOUND | HOSPITALTY | AL WAAB AREA",
+      SAMRYA_GARDENS_DES: "Samrya Gardens is the flagship property development of Samrya Group renowned  for being the ideal choice for family-oriented residential communities.",
+      AAYAN_WEST_BAY: "AAYAN WEST BAY HOTEL SERVICED APARTMENTS",
+      AAYAN_WEST_BAY_LABELS: "TOWER | HOSPITALITY | WESTBAY AREA",
+      AAYAN_WEST_BAY_DES: " Aayan Tower is another luxury residential tower standing tall in the West Bay area of Doha. The fully furnished hotel serviced apartments will set a new standard of living, offering all the comforts of a hotel in the privacy of one’s home.",
+      SAMRYA_TWIN_TOWERS: "SAMRYA TWIN TOWERS WESTBAY",
+      SAMRYA_TWIN_TOWERS_LABELS: "TOWER | COMMERCIAL | WESTBAY AREA",
+      SAMARY_TWIN_TOWERS_DES: "Samrya Twin Towers strategically located in Doha’s West Bay skyline, is Samrya Group’s flagship commercial project renowned for its stylish and chic design.",
+      OUR_DEVELOPMENTS: "OUR DEVELOPMENTS",
+      SEND_MESSAGE: "Send A Message",
+      Confirm: "Confirm",
+      MON_FRI:"Monday - Friday",
+      CONTACT_US: "CONTACT US",
+    },  
   },
   ru: {
     translation: {
@@ -93,8 +116,31 @@ const resources = {
       ABOUT_THE_COMPANY: "О КОМПАНИИ",
       OUR_DEVELOPMENTS: "НАШИ РАЗВИТИЯ",
       CONTACT_US: "КОНТАКТЫ",
-      OUR_SERVICES: "НАШИ УСЛУГИ"
-    
+      OUR_SERVICES: "НАШИ УСЛУГИ",
+      THE_PLAZA_DOHA: "THE PLAZA DOHA",
+      THE_PLAZA_DOHA_DES: "The Plaza Doha — это роскошный комплекс в самом сердце Дохи, предлагающий своим посетителям и жителям уникальный и неповторимый гостиничный опыт.",
+      THE_PLAZA_DOHA_LABELS: "НАПРАВЛЕНИЕ | ГОСТЕПРИИМСТВО | РАЙОН УММ ГУВАЙЛИНА",
+  
+      THE_VYRA_SUITES_DOHA: "THE VYRA SUITES DOHA",
+      THE_VYRA_SUITES_LABELS: "ГОСТЕПРИИМСТВО | БАШНЯ | РАЙОН WESTBAY",
+      THE_VYRA_SUITES_DES: "The Vyra Suites Doha — одна из башен Samrya Group в районе West Bay. Этот комплекс известен своими роскошными удобствами, тщательно подобранной мебелью и декором с вниманием к деталям в каждом уголке.",
+
+      SAMRYA_GARDENS_DOHA: "SAMRYA GARDENS DOHA",
+      SAMRYA_GARDENS_LABELS: "ЖИЛОЙ КОМПЛЕКС | ГОСТЕПРИИМСТВО | РАЙОН AL WAAB",
+      SAMRYA_GARDENS_DES: "Samrya Gardens — это флагманский жилой комплекс Samrya Group, известный как идеальный выбор для семейных жилых сообществ.",
+
+      AAYAN_WEST_BAY: "AAYAN WEST BAY HOTEL SERVICED APARTMENTS",
+      AAYAN_WEST_BAY_LABELS: "БАШНЯ | ГОСТЕПРИИМСТВО | РАЙОН WESTBAY",
+      AAYAN_WEST_BAY_DES: "Aayan Tower — еще одна роскошная жилая башня в районе West Bay Дохи. Полностью меблированные гостиничные апартаменты устанавливают новый стандарт жизни, предлагая все удобства отеля в уединенной атмосфере собственного дома.",
+
+      SAMRYA_TWIN_TOWERS: "SAMRYA TWIN TOWERS WESTBAY",
+      SAMRYA_TWIN_TOWERS_LABELS: "БАШНЯ | КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ | РАЙОН WESTBAY",
+      SAMARY_TWIN_TOWERS_DES: "Samrya Twin Towers, стратегически расположенные на горизонте района West Bay в Дохе, являются флагманским коммерческим проектом Samrya Group, известным своим стильным и изысканным дизайном.",
+      OUR_DEVELOPMENTS : "НАШИ РАЗВИТИЯ",
+      SEND_MESSAGE : "Отправить Письмо",
+      Confirm : "Подтвердить",
+      MON_FRI : "Понедельник - Пятница",
+      CONTACT_US : "СВЯЖИТЕСЬ С НАМИ",
     },
   },
 };
@@ -103,7 +149,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en", // default language
+    lng: storedLanguage, // Set stored language as the default
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },

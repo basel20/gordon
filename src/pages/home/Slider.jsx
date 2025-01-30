@@ -5,7 +5,7 @@ import '../../config/i18n';
 
 const Slider = ({ slides }) => {
 
-  const { t } = useTranslation();
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
    

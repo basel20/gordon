@@ -8,11 +8,22 @@ import { faGlobe, faLanguage } from '@fortawesome/free-solid-svg-icons';
 const Navbar = ({color}) => {
 
   const { t, i18n } = useTranslation();
-  const switchLanguage = () => {
+
+    React.useEffect(() => {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        i18n.changeLanguage(storedLanguage);
+      }
+    }, [i18n]);
+
+ const switchLanguage = () => {
     const currentLanguage = i18n.language;
     const newLanguage = currentLanguage === 'en' ? 'ru' : 'en';
+
+    // Store the selected language in localStorage
+    localStorage.setItem('language', newLanguage);
     i18n.changeLanguage(newLanguage);
-  };
+  };;
 
 
   return (
