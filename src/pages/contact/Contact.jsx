@@ -25,7 +25,7 @@ const Contact = () => {
           <div className='flex gap-8'>
               <img src={phone} alt="phone" height={100} width={100}/>
               <span className='flex flex-col items-start justify-center gap-2'>
-                <h4 className='font-semibold text-left text-xl'>+7 (800) 222-11-53</h4>
+                <h4 className='font-semibold text-left text-xl'>+7 (800) 222-23-57</h4>
                 {/* <h4 className='font-semibold text-left text-xl'>+7 (800) 555-35-35</h4> */}
               </span>
             </div>
@@ -79,6 +79,15 @@ const Contact = () => {
             <MapComponent />
         </div>
 
+        {/* <div className="w-[95%] md:w-[85%] h-[22rem] flex flex-col md:flex-row  gap-5 justify-between items-center">
+          <div className="w-[95%] md:w-[50%] h-[100%]">
+            <MapComponent />
+          </div>
+            
+            <div className="w-[95%] md:w-[50%] h-[100%] hidden md:flex">
+              <img src={MC} alt="map" height={'100%'} width={'100%'}/>
+            </div>
+        </div> */}
 
       </div>
     </section>

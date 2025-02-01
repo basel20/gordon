@@ -31,7 +31,7 @@ const Footer = () => {
       <div className='flex flex-col gap-4 justify-center md:items-start text-lg'>
         <p className='text-left'>{t('Location')} <br/> {t('Address')}</p>
         <p>gordon@mail.com</p>
-        <p>8 (800) 222-11-53</p>
+        <p>8 (800) 222-23-57</p>
         {/* <p>8 (800) 555-35-35</p> */}
       </div>
       <div className='flex md:flex-col gap-5 justify-center md:items-start text-lg'>

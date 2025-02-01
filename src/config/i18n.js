@@ -71,6 +71,8 @@ const resources = {
       Confirm: "Confirm",
       MON_FRI:"Monday - Friday",
       CONTACT_US: "CONTACT US",
+      ABOUT_US: "ABOUT US",
+      ABOUT_US_TEXT: "We both deal with import & export of precious metals, petroleum products, wood and efficiently carry out transactions in the luxury segment, relying on many years of experience and professionalism of our team."
     },  
   },
   ru: {
@@ -141,6 +143,8 @@ const resources = {
       Confirm : "Подтвердить",
       MON_FRI : "Понедельник - Пятница",
       CONTACT_US : "СВЯЖИТЕСЬ С НАМИ",
+      ABOUT_US : "О НАС",
+      ABOUT_US_TEXT: "Мы занимаемся импортом и экспортом драгметаллов, нефтепродуктов, древесины и ювелирно проводим сделки в сегменте класса люкс, опираясь на многолетний опыт и профессионализм нашей команды."
     },
   },
 };
